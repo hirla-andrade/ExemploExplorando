@@ -12,3 +12,4 @@ C:\Users\hhirl\OneDrive\Documentos\Rocketseat\ExemploExplorando\obj\Debug\net8.0
 C:\Users\hhirl\OneDrive\Documentos\Rocketseat\ExemploExplorando\obj\Debug\net8.0\ExemploExplorando.pdb
 C:\Users\hhirl\OneDrive\Documentos\Rocketseat\ExemploExplorando\obj\Debug\net8.0\ExemploExplorando.genruntimeconfig.cache
 C:\Users\hhirl\OneDrive\Documentos\Rocketseat\ExemploExplorando\obj\Debug\net8.0\ref\ExemploExplorando.dll
+C:\Users\hhirl\OneDrive\Documentos\Rocketseat\ExemploExplorando\obj\Debug\net8.0\ExemploExplorando.sourcelink.json
