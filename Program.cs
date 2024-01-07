@@ -1,26 +1,78 @@
 ﻿using ExemploExplorando.Models;
 using System.Globalization;
 
-string dataString = "2022-04-14 09:00";
-
-DateTime.TryParseExact(dataString, "yyyy-MM-dd HH:mm", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime data);
-
-if (sucesso)
+    //string[] linhasExemplo = File.ReadAllLines("Arquivos/arquivoLeitura.txt");
+    //Console.WriteLine("Chegou até aqui");
+try
 {
-    Console.WriteLine($"Conversão com sucesso! Data: {data}");
-}
-else
+    string[] linhas = File.ReadAllLines("Arquivos/arquivoLeitura.txt");
+
+    foreach (string linha in linhas)
+    {
+        Console.WriteLine(linha);
+    }
+} 
+catch (FileNotFoundException ex)
 {
-    Console.WriteLine($"{dataString} não é uma data válida");
+    Console.WriteLine($"Ocorreu uma exceção genérica. {ex.Message}");
+}
+catch (DirectoryNotFoundException ex)
+{
+    Console.WriteLine($"Ocorreu um erro na leitura do arquivo. Caminho da pasta não encontrado" + ex.Message);
+}
+catch (Exception ex)
+{
+    Console.WriteLine($"Ocorreu uma exceção genérica. {ex.Message}");
 }
 
-//DateTime data = DateTime.Parse(dataString);
-//DateTime data = DateTime.Parse("17/04/2022 18:00"); //pode usar DateTime.Now para pegar a hora exata do sistema
+finally {
+    Console.WriteLine("Chegou até aqui"); //finally vem depois dos catchs, executa um bloco de código no final da execução
+}
 
-Console.WriteLine(data);
-//Console.WriteLine(data.ToShortTimeString()); //só exibi hora
 
-//Console.WriteLine(data.ToString("dd/MM/yyyy HH:mm")); //MM é mês e mm é minuto, HH é hora formato 24h e hh é hora formato 12 horas(fica confuso)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// string dataString = "2022-04-14 09:00";
+
+// DateTime.TryParseExact(dataString, "yyyy-MM-dd HH:mm", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime data);
+
+// if (sucesso)
+// {
+//     Console.WriteLine($"Conversão com sucesso! Data: {data}");
+// }
+// else
+// {
+//     Console.WriteLine($"{dataString} não é uma data válida");
+// }
+
+
+// Console.WriteLine(data);
+
+//Só anotações esses de baixo
+// //DateTime data = DateTime.Parse(dataString);
+// //DateTime data = DateTime.Parse("17/04/2022 18:00"); //pode usar DateTime.Now para pegar a hora exata do sistema
+// //Console.WriteLine(data.ToShortTimeString()); //só exibi hora
+
+// //Console.WriteLine(data.ToString("dd/MM/yyyy HH:mm")); //MM é mês e mm é minuto, HH é hora formato 24h e hh é hora formato 12 horas(fica confuso)
 
 
 
